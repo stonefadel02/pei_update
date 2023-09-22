@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>header</title>
+</head>
+<body>
+        <nav id="header" class="bg-white fixed w-full z-30 top-0 text-white drop-shadow-md scroll-auto">
+            <div class="text-[90%] w-full container mx-auto flex flex-wrap justify-start mt-0 py-2">
+                <div class="w-[70%] sm:w-auto pl-4 flex">
+                    <a class="toggleColour text-blue-900 no-underline hover:no-underline font-bold text-2xl sm:text-4xl"
+                        href="/">
+                        <img src="../Images/logo.svg" alt="" />
+                    </a>
+                </div>
+        
+                <div class="block sm:hidden pr-4" @click="showNavContent()">
+                    <button id="nav-toggle"
+                        class="flex items-center px-3 py-2 rounded text-gray-500 hover:text-gray-800 appearance-none focus:outline-none">
+                        <svg :class="menu === false ? 'text-primary-base' : 'text-red-900'" width="40" height="40"
+                            viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="17" cy="8" r="4" fill="primary-base" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M15 8C15 6.89543 15.8954 6 17 6C18.1046 6 19 6.89543 19 8H15ZM11 8C11 7.29873 11.1203 6.62556 11.3414 6H5C4.44772 6 4 6.44772 4 7C4 7.55228 4.44772 8 5 8H11ZM11.8027 11C12.2671 11.8028 12.9121 12.488 13.6822 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11.8027ZM5 16C4.44772 16 4 16.4477 4 17C4 17.5523 4.44772 18 5 18H19C19.5523 18 20 17.5523 20 17C20 16.4477 19.5523 16 19 16H5Z"
+                                fill="currentcolor" />
+                        </svg>
+                    </button>
+                </div>
+        
+                <div ref="menu"
+                    class="w-full flex-grow sm:flex sm:items-center sm:w-auto h-screen sm:h-full my-[50%] mx-[20%] sm:m-auto sm:block sm:mt-0 sm:bg-white sm:bg-transparent text-black p-4 sm:p-0 z-20"
+                    :class="menu ? '' : 'hidden'">
+                    <ul class="list-reset sm:ml-[-10%] sm:flex justify-center flex-1 items-center">
+                        <li class="mr-3 mb-8 sm:mb-auto sm:mt-4">
+                            <a class="inline-block py-2 px-4 text-[#6A6B6C] hover:text-[#008C36] hover:font-bold  no-underline"
+                                @click="showNavContent()" href="/about">Accueil</a>
+                        </li>
+                        <li class="mr-3 mb-8 sm:mb-auto sm:mt-4">
+                            <a class="inline-block text-[#6A6B6C] no-underline hover:font-bold hover:text-[#008C36] hover:text-underline py-2 px-4"
+                                @click="showNavContent()" href="#">A propos
+                            </a>
+                        </li>
+                        <li class="mr-3 mb-8 sm:mb-auto sm:mt-4">
+                            <a class="inline-block text-[#6A6B6C] no-underline hover:font-bold hover:text-[#008C36] hover:text-underline py-2 px-4"
+                                @click="showNavContent()" href="/opportunity">Contact
+                            </a>
+                        </li>
+                        <li class="mr-3 mb-8 sm:mb-auto sm:mt-4">
+                            <a class="inline-block text-[#6A6B6C] no-underline hover:font-bold hover:text-[#008C36] hover:text-underline py-2 px-4"
+                                @click="showNavContent()" href="contact">Blog
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="sm:mr-6">
+                        <button id="navAction"
+                            class="mx-auto  sm:mx-0 hover:no-underline font-bold bg-white text-[#6A6B6C]  sm:mr-2 border-2 rounded-l-[15px] rounded-br-[15px]  border-[#008C36]  mt-4 sm:mt-2 py-2.5 px-8 ">
+                            S'inscrire
+                        </button>
+                        <button id="navAction"
+                            class="mx-auto  sm:mx-0 hover:no-underline font-bold text-white  sm:mr-2 border-2   rounded-l-[15px] rounded-br-[15px] bg-[#008C36] hover:bg-white hover:text-[#6A6B6C] hover:border-[#008C36]  mt-4 sm:mt-2 py-2.5  px-5 ">
+                            Se connecter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <script>
+                let navContent = document.getElementById("nav-content");
+
+                    let navMenu = document.getElementById("home");
+                    let home = document.getElementById("presentation");
+                    let services = document.getElementById("services");
+                    let contact = document.getElementById("contact");
+
+        </script>
+</body>
+</html>
