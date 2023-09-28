@@ -1,18 +1,21 @@
 .i1{
-    background-image: url("./Images/i1.png");
+    background-image: url("Images/i1.png");
 }
 .i2 {
-    background-image: url("./Images/i2.png");
+    background-image: url("Images/i2.png");
 }
 .i3 {
-    background-image: url("./Images/i3.png");
+    background-image: url("Images/i3.png");
 }
 .i4 {
-    background-image: url("./Images/i4.png");
+    background-image: url("Images/i4.png");
 }
 .i5 {
-    background-image: url("./Images/i5.png");
+    background-image: url("Images/i5.png");
 }
 .c1 {
-    background-image: url("./Images/c1.png");
+    background-image: url("Images/c1.png");
+}
+.image1{
+    background-image: url("Images/image1.png");
 }
