@@ -34,3 +34,11 @@
     right:-800px ;
     
 }
+
+.hide-scrollbar-x::-webkit-scrollbar {
+    display: none;
+}
+  
+.hide-scrollbar-y::-webkit-scrollbar {
+      display: none;
+  }
