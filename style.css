@@ -14,7 +14,15 @@
     background-image: url("Images/i5.png");
 }
 .c1 {
-    background-image: url("Images/c1.png");
+    background-image: url("./Images/c1.png");
+}
+.s1 {
+    background-image: url("./Images/s1.png");
+}
+.d1 {
+    background-image: url("./Images/d1.png");
+
+   
 }
 .image1{
     background-image: url("Images/image1.png");
