@@ -27,3 +27,12 @@
 .image1{
     background-image: url("Images/image1.png");
 }
+
+.v{
+    
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* Internet Explorer / Edge */
+        
+}
