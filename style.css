@@ -28,11 +28,9 @@
     background-image: url("Images/image1.png");
 }
 
-.v{
+
+.active{
+    position: absolute;
+    right:-800px ;
     
-            scrollbar-width: none;
-            /* Firefox */
-            -ms-overflow-style: none;
-            /* Internet Explorer / Edge */
-        
 }
