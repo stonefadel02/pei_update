@@ -19,7 +19,8 @@
                 <div class="block sm:hidden pr-4" @click="showNavContent()">
                     <button id="nav-toggle"
                         class="flex items-center px-3 py-2 rounded text-gray-500 hover:text-gray-800 appearance-none focus:outline-none">
-                        <svg :class="menu === false ? 'text-primary-base' : 'text-red-900'" width="40" height="40"
+                        <svg id="toggleNav"
+                        :class="menu === false ? 'text-primary-base' : 'text-red-900'" width="40" height="40"
                             viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="17" cy="8" r="4" fill="primary-base" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -29,9 +30,10 @@
                     </button>
                 </div>
         
-                <div ref="menu"
-                    class="w-full flex-grow sm:flex sm:items-center sm:w-auto h-screen sm:h-full my-[50%] mx-[20%] sm:m-auto sm:block sm:mt-0 sm:bg-white sm:bg-transparent text-black p-4 sm:p-0 z-20"
-                    :class="menu ? '' : 'hidden'">
+                <div id="navBarMenu"
+                ref="menu" 
+                class=" active transition ease-in duration-700 flex-grow sm:flex sm:items-center sm:w-auto h-screen sm:h-full my-[50%] mx-[20%] sm:m-auto sm:block sm:mt-0 sm:bg-white sm:bg-transparent text-black p-4 sm:p-0 z-20"
+                :class="menu ? '' : 'hidden'">
                     <ul class="list-reset sm:ml-[-10%] sm:flex justify-center flex-1 items-center">
                         <li class="mr-3 mb-8 sm:mb-auto sm:mt-4">
                             <a class="inline-block py-2 px-4 text-[#6A6B6C] hover:text-[#008C36] hover:font-bold  no-underline"
@@ -73,6 +75,15 @@
                     let home = document.getElementById("presentation");
                     let services = document.getElementById("services");
                     let contact = document.getElementById("contact");
+                    let toggleNav = document.getElementById("toggleNav");
+                    let navBarMenu = document.getElementById("navBarMenu");
+                    
+                    toggleNav.addEventListener('click',() => {
+                        if(navBarMenu.className.match("active")){
+                        navBarMenu.classList.remove("active")
+
+                        }else{navBarMenu.classList.add("active")}
+                    });
 
         </script>
 </body>

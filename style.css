@@ -19,3 +19,9 @@
 .image1{
     background-image: url("Images/image1.png");
 }
+
+.active{
+    position: absolute;
+    right:-800px ;
+    
+}
